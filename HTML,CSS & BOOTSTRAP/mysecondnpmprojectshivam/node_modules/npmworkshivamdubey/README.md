@@ -1,0 +1,1 @@
+This is a module which connects Oracle Database with Javascript.

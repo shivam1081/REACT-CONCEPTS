@@ -1,0 +1,58 @@
+-var myName="Shivam"
+doctype 
+html 
+    head 
+        title Welocome to Jade
+    body
+        p(class='myP', id='myPID') This is a Paragraph
+        div(align="center")
+            h1 This is my first div
+        div 
+            h1 #{myName}
+        div(style={color:'green','background-color':'blue'})
+        form(action='',methods='POST')
+            label(for='Firstname') First Name: 
+            input(type='text',name='firstName',id='firstName')
+        
+
+        div.myDiv.my2ndDiv#myClass
+
+        
+        mixin myParagraph(name)
+            p Hello Welcome to Accenture.... #{name}
+        title Jade PlayGround
+        +myParagraph(myName)
+        +myParagraph("Dubey")
+
+
+        -var myPara="Para1";
+        -var myName="Shiv";
+
+        mixin MyParagraph(name,myid)
+            p(id=myid) Hello #{name} , Welcome to Accenture...
+
+        head Jade Playground 
+        +MyParagraph(myName,myPara)
+
+
+
+
+        -var myName1="";
+        head    
+            title Jade Playground 
+            if myName1  
+                h1 Welcome #{myName1}
+            else 
+                h1 Thank You 
+
+
+        -var myName="Shivam";
+        -var mySkills=["C++","Java","Angular","React"];
+
+        h1 Hello #{myName} , Look at your skills 
+        ul 
+            each val in mySkills 
+                li=val
+
+
+

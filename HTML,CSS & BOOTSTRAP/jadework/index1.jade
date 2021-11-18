@@ -1,0 +1,11 @@
+extends ./layout.jade
+
+block headContent
+	title Jade PlayGround
+
+block bodyContent
+	h1 Hi Hello Everyone , welcome to Jade 
+	p(class='myP', id='myPID') This is a Paragraph
+	form(action='', method='POST')
+		label(for='firstname') First Name:
+		input(type='text',name='firstName',id='firstName')

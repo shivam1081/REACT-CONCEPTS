@@ -1,0 +1,200 @@
+doctype html
+html
+	head
+		title Jade PlayGround
+
+============================================================================================
+doctype html
+html
+	head
+		title Jade PlayGround
+	body
+		h1 Hi Hello Everyone , welcome to Jade 
+		p(class='myP', id='myPID') This is a Paragraph
+============================================================================================
+doctype html
+html
+	head
+		title Jade PlayGround
+	body
+		h1 Hi Hello Everyone , welcome to Jade 
+		p(class='myP', id='myPID') This is a Paragraph
+		div.myDiv.my2nddiv#mydivID
+		
+============================================================================================
+doctype html
+html
+	head
+		title Jade PlayGround
+	body
+		h1 Hi Hello Everyone , welcome to Jade 
+		p(class='myP', id='myPID') This is a Paragraph
+		div.myDiv.my2nddiv#mydivID
+		div(style={color:'green',background:'blue'})
+============================================================================================
+doctype html
+html
+	head
+		title Jade PlayGround
+	body
+		h1 Hi Hello Everyone , welcome to Jade 
+		p(class='myP', id='myPID') This is a Paragraph
+		div .myDiv.my2nddiv#mydivID
+		div(style={color:'green' , background:'blue'})
+		form(action='', method='POST')
+			label(for='firstname') First Name:
+			input(type='text',name='firstName',id='firstName')
+============================================================================================
+doctype html
+html
+	head
+		title Jade PlayGround
+	body
+		h1 Hi Hello Everyone , welcome to Jade 
+		p(class='myP', id='myPID') This is a Paragraph
+		div .myDiv.my2nddiv#mydivID
+		div(style={color:'green' , background:'blue'})
+		form(action='', method='POST')
+			label(for='firstname') First Name:
+			input(type='text',name='firstName',id='firstName')
+			label(for='lastname') Last Name:
+			input(type='text',name='lastName',id='lastName')
+			label(for='mylist') Occupation:
+			select(id='myList', name='myList')
+				option(value='Designer') Designer
+				option(value='Coder') Coder
+============================================================================================
+doctype html
+html
+	head
+		title Jade PlayGround
+	body
+		h1 Hi Hello Everyone , welcome to Jade 
+		p(class='myP', id='myPID') This is a Paragraph
+		div.myDiv.my2nddiv#mydivID
+		div(style={color:'green' , background:'blue'})
+		form(action='', method='POST')
+			label(for='firstname') First Name:
+			input(type='text',name='firstName',id='firstName')
+			label(for='lastname') Last Name:
+			input(type='text',name='lastName',id='lastName')
+			label(for='mylist') Occupation:
+			select(id='myList', name='myList')
+				option(value='Designer') Designer
+				option(value='Coder') Coder
+			input(type='button', value='Submit')
+==========================================MIXINS============================================
+mixin myParagraph
+	p Hello Welcome to Accenture....
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		+myParagraph
+==========================================MIXINS with PARAMETERS============================
+- var myName = "Thangaraj";
+mixin myParagraph(name)
+	p Hello #{name} , Welcome to Accenture....
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		+myParagraph(myName)
+
+================================Sending attribute value with MIXINS========================
+- var myPara = "Para1";
+- var myName = "Thangaraj";
+mixin myParagraph(name , myid)
+	p(id= myid) Hello #{name} , Welcome to Accenture....
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		+myParagraph(myName, myPara)
+=============================== Block of Code in MIXINS ===================================
+- var myName1 = "Thangaraj";
+- var myName2 = "Rahul";
+mixin myParagraph(name)
+	p Hello #{name} , Welcome to Accenture....
+	h1 How are you?
+	h2 I am Fine, Thank you
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		+myParagraph(myName1)
+
+		+myParagraph(myName2)
+===========================IF-ELSE Statement=========(Executing If Part)===================
+- var myName1 = "Thangaraj";
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		if myName1
+			h1 Welcome #{myName1}
+		else
+			h1 Thank you
+-----------------------ELSE Part-------------------------------
+- var myName1 = '';
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		if myName1
+			h1 Welcome #{myName1}
+		else
+			h1 Thank you
+===========================IF-ELSE Statement=========(Executing ELSE Part)=================
+- var myName2 = "Thangaraj";
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		if myName1
+			h1 Welcome #{myName1}
+		else
+			h1 Thank you
+==================================== Arrays and Iterations ================================
+- var myName = "Thangaraj";
+- var mySkills = ["C++","Java","Angular", "NodeJS","BigData","Hadoop","Perl","Python","Unix","Html"];
+
+doctype html
+html
+	head
+		title Jade PlayGround
+		h1 Hello #{myName} , Look at your Skills...
+		ul
+			each val in mySkills 
+				li= val
+
+=============================================EXTENDS Demo===============================================
+
+doctype html
+html
+	head
+		block headContent
+	body
+		block bodyContent
+------------------------------------------------------------
+extends ./layout.jade
+
+block headContent
+	title Jade PlayGround
+
+block bodyContent
+	h1 Hi Hello Everyone , welcome to Jade 
+	p(class='myP', id='myPID') This is a Paragraph
+	form(action='', method='POST')
+		label(for='firstname') First Name:
+		input(type='text',name='firstName',id='firstName')
+========================================================================================================
+
+

@@ -1,0 +1,175 @@
+h1 {
+  background-color: purple;
+  font-size: 80px;
+}
+
+div {
+  background-color: #8080ff;
+}
+
+table {
+  background-color: green;
+}
+
+#id {
+  background: url("images/NathulaPass.jpg");
+}
+
+h1 {
+  font-size: 40px;
+  background-color: red;
+  color: yellow;
+  font-size: 120;
+}
+
+h2 {
+  font-size: 40px;
+  background-color: purple;
+}
+
+div {
+  width: 100;
+}
+
+div {
+  background-color: green;
+  color: red;
+}
+
+div {
+  color: black;
+}
+
+.col1 {
+  width: 1024px;
+}
+
+.col2 {
+  width: 512px;
+}
+
+.col3 {
+  width: 341.3333333333px;
+}
+
+.col4 {
+  width: 256px;
+}
+
+.col5 {
+  width: 204.8px;
+}
+
+.col6 {
+  width: 170.6666666667px;
+}
+
+.col7 {
+  width: 146.2857142857px;
+}
+
+.col8 {
+  width: 128px;
+}
+
+.col9 {
+  width: 113.7777777778px;
+}
+
+.col10 {
+  width: 102.4px;
+}
+
+.col11 {
+  width: 93.0909090909px;
+}
+
+.col12 {
+  width: 85.3333333333px;
+}
+
+.col13 {
+  width: 78.7692307692px;
+}
+
+.col14 {
+  width: 73.1428571429px;
+}
+
+.col15 {
+  width: 68.2666666667px;
+}
+
+.col16 {
+  width: 64px;
+}
+
+.col17 {
+  width: 60.2352941176px;
+}
+
+.col18 {
+  width: 56.8888888889px;
+}
+
+.col19 {
+  width: 53.8947368421px;
+}
+
+.col20 {
+  width: 51.2px;
+}
+
+.red-class {
+  background-color: red;
+}
+
+.blue-class {
+  background-color: blue;
+}
+
+.green-class {
+  background-color: green;
+}
+
+.violet-class {
+  background-color: violet;
+}
+
+.indigo-class {
+  background-color: indigo;
+}
+
+.yellow-class {
+  background-color: yellow;
+}
+
+.orange-class {
+  background-color: orange;
+}
+
+h1 {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 50px;
+}
+
+h6 {
+  font-size: 60px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,126 @@
+$mycolor1:yellow;
+$mycolor2:yellow;
+$v1:20;
+$v2:30;
+$myfontsize:30px;
+$mysize:40px;
+
+
+h1{
+background-color: if(($v1+$v2)>30,green,red);
+}
+================STRING INTERPOLATION===================
+$imageLocation:"images/";
+#id{
+Background: url("#{$imageLocation}NathulaPass.jpg");
+     }
+=======================================================
+
+$imageLocation:"images/";
+
+#id{
+Background: url("#{$imageLocation}NathulaPass.jpg");
+     }
+==============================================================
+------- Create a file with the name 1.scss and copy the below two lines---------
+$mycolor1:green;
+$mycolor2:red;
+
+-------------Create another file with the name index.scss and copy the below  lines----------
+@import '1.scss';
+div
+{
+background-color:$mycolor1;
+color:$mycolor2
+}
+
+==================================================================
+.class1{
+     color:blue;
+     }
+
+.class2 {
+	@extend .class1;
+	background-color:green;
+ 	}
+====================================================
+@mixin myfirstmixin
+{
+	color:blue;
+	font-size:40px;
+}
+
+
+h1{
+	@include myfirstmixin;
+	background-color:yellow;
+}
+====================================================
+$mycolor1:red;
+$mycolor2:green;
+
+@mixin myfirstmixin($colour)
+{
+	color:$colour;
+	font-size:40px;
+}
+
+h1{
+	@include myfirstmixin($mycolor1);
+	background-color:yellow;
+}
+
+h2{
+	@include myfirstmixin($mycolor2);
+	background-color:purple;
+}
+=======================================================
+$fontsize:20px;
+
+@function IncreaseFontSizeNTimes($inc)
+{
+	@return $fontsize * $inc;
+}
+
+h1{
+	font-size:IncreaseFontSizeNTimes(2);
+}
+
+h2{
+	font-size:IncreaseFontSizeNTimes(4);
+}
+
+========================================================
+$page:1;
+div{
+	@if  $page==1 {
+	color : black;
+	}
+	@else if $page==2 {
+	color : pink;
+	}
+	@else {
+	color : violet;
+	}
+}
+======================================================
+@each $colors in 'red','blue','green','violet','indigo','yellow','orange' 
+{
+    .#{$colors}-class 
+	{
+	background-color : #{$colors};
+	}
+}
+=======================================================
+
+$i : 1 ;
+
+@while $i <= 6 
+{
+	h#{$i} 
+	{
+	font-size : $i * 10px;
+	}
+	$i : $i +1;
+}
+=======================================================
